@@ -1,11 +1,12 @@
 import UserCard from "@/components/UserCard";
 import CountCharts from "@/components/CountCharts";
+import AttendanceChart from "@/components/AttendanceChart";
 
 const Admin = () => {
   return (
-    <div className="p-4 flex gap-4 flex-col md:flex-row ">
+    <div className="p-2 flex gap-4 flex-col md:flex-row ">
       {/* LEFT */}
-      <div className=" w-full lg:w-2/3 bg-white p-3  rounded-md" >
+      <div className=" w-full lg:w-2/3 bg-white p-2  rounded-md" >
         {/* USERS-CARD */}
         <div className="flex gap-4 justify-between flex-wrap">
           <UserCard type="students" />
@@ -13,12 +14,14 @@ const Admin = () => {
           <UserCard type="teachers" />
           <UserCard type="staff" />
         </div>
-        <div>
-          <div>
-           <CountCharts/>
+        <div className="flex flex-col items-center justify-evenly lg:flex-row flex-nowrap">
+          {/* COUNT CHART */}
+          <div className="w-full lg:w-[30%] text-[8px]  lg:text-xs">
+            <CountCharts />
           </div>
-          <div>
-
+          {/* ATTENDANCE CHART */}
+          <div className="w-full p-2 lg:w-[60%] " >  
+            <AttendanceChart />
           </div>
         </div>
       </div>
@@ -27,5 +30,5 @@ const Admin = () => {
     </div>
   );
 }
- 
+
 export default Admin

@@ -54,9 +54,10 @@ const data = [
 
 const CountCharts = () => {
     return (
-        <div className="max-w-3xl w-full h-full flex-col justify-center items-center  p-3 mt-2 " >
+        <div className="max-w-3xl w-full h-fit flex-col justify-center items-center  mt-2 " >
             <div className="relative flex justify-center items-center">
                 <Image src='/maleFemale.png' alt="" width={40} height={40} className="absolute" />
+            <ResponsiveContainer width={300} height={300}>
                 <RadialBarChart
                     width={300}
                     height={300}
@@ -70,12 +71,13 @@ const CountCharts = () => {
                     {/* <Legend iconSize={7} width={200} height={200} layout="centric" verticalAlign='bottom' align="center" /> */}
                     {/* <Tooltip /> */}
                 </RadialBarChart>
+                </ResponsiveContainer>
             </div>
-            <div className="flex gap-4 justify-center ">
-            {data.map((item) => (
-                <div style={{backgroundColor:item.fill, padding:'5px', color:"black", borderRadius:'5px', fontSize:'0.8 rem'}} >{item.pv}</div>
-            )
-            )}
+            <div className="flex gap-4 justify-center h-fit ">
+                {data.map((item, index) => (
+                    <div key={index} style={{ backgroundColor: item.fill, padding: '5px', color: "black", borderRadius: '5px', fontSize: '0.6 rem' }} >{item.pv}</div>
+                )
+                )}
             </div>
         </div>
     );
