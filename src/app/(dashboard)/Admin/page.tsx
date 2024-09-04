@@ -1,6 +1,7 @@
 import UserCard from "@/components/UserCard";
 import CountCharts from "@/components/CountCharts";
 import AttendanceChart from "@/components/AttendanceChart";
+import FinanceChart from "@/components/FinanceChart";
 
 const Admin = () => {
   return (
@@ -16,13 +17,17 @@ const Admin = () => {
         </div>
         <div className="flex flex-col items-center justify-evenly lg:flex-row flex-nowrap">
           {/* COUNT CHART */}
-          <div className="w-full lg:w-[30%] text-[8px]  lg:text-xs">
+          <div className="w-full lg:w-[30%] text-[7px]  lg:text-xs">
             <CountCharts />
           </div>
           {/* ATTENDANCE CHART */}
-          <div className="w-full p-2 lg:w-[60%] " >  
+          <div className="w-full p-2 lg:w-[60%] " >
             <AttendanceChart />
           </div>
+        </div>
+        {/* FINANCE CHART */}
+        <div className="h-50 py-4 text-[8px] lg:text-xs  lg:h-80 border-t-2 border-t-gray-400 mt-4  " >
+          <FinanceChart/>
         </div>
       </div>
       {/* RIGHT */}
