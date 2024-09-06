@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.react-calendar {
+    @apply border-none  max-w-full  h-0 ;
+  }
+  
+  .react-calendar__tile {
+    @apply p-2 bg-gray-100 rounded-md transition-colors duration-150 ease-in-out border-none ;
+  }
+  
+  .react-calendar__tile--active {
+    @apply bg-blue-500 text-white border-none ;
+  }
+  
+  .react-calendar__navigation button {
+    @apply bg-blue-500 text-black border-none rounded-lg p-2 m-1 font-semibold border-none ;
+  }
+  
+  .react-calendar__month-view__days__day--weekend {
+    @apply text-red-500 border-none ;
+  }
+
+  .react-calendar__navigation__label {
+    @apply text-black border-none ;
+  }

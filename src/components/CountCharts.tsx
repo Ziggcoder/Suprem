@@ -54,7 +54,7 @@ const data = [
 
 const CountCharts = () => {
     return (
-        <div className="max-w-3xl w-full h-fit flex-col justify-center items-center  mt-2 " >
+        <div className="max-w-3xl w-full h-fit flex-col justify-center items-center pb-2 mt-2 bg-white rounded-lg " >
             <div className="relative flex justify-center items-center">
                 <Image src='/maleFemale.png' alt="" width={40} height={40} className="absolute" />
             <ResponsiveContainer width={300} height={300}>

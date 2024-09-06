@@ -40,7 +40,7 @@ const AttendanceChart = () => {
 
     return (
         <>
-            <div className="flex justify-center items-center h-fit" >
+            <div className="flex justify-center items-center h-fit bg-white rounded-lg" >
                 <ResponsiveContainer width={400} height={330} >
                     <BarChart width={300} height={200} data={data}>
                         {/* <CartesianGrid strokeDasharray="33" /> */}

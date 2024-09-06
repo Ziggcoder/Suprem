@@ -84,7 +84,7 @@ const FinanceChart = () => {
             <ResponsiveContainer width='100%' height='100%' >
                 <LineChart
                     width={700}
-                    height={300}
+                    height={700}
                     data={data}
                     margin={{
                         top: 5,
